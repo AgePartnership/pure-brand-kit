@@ -15,7 +15,7 @@ html {
 // Arial Black (extra bold)
 // The brand guidelines specify an additional third font weight option, Arial Black. Arial Black is a completely separate font file to Arial (defined above as $font) so that needs to be dealt with differently. To use Arial Black, either put the following class directly into your HTML. Alternatively, you can use Sass @extend (ref: http://sass-lang.com/documentation/file.SASS_REFERENCE.html#_extend__extend) to pull the contents of the class into another CSS rule or just use the $font-secondary variable.
 
-.pr-u-arial-black {
+.pr-u-font--secondary {
     font-family: $font-secondary;
 }
 
