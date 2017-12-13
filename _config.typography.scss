@@ -1,0 +1,167 @@
+
+// Base font stack
+$font: Arial, Helvetica, sans-serif;
+$font-secondary: "Arial Black", sans-serif;
+
+// Base font weights
+$regular: 400;
+$bold: 700;
+
+// Initialise font use on the html element
+html {
+    font-family: $font;
+}
+
+// Arial Black (extra bold)
+// The brand guidelines specify an additional third font weight option, Arial Black. Arial Black is a completely separate font file to Arial (defined above as $font) so that needs to be dealt with differently. To use Arial Black, either put the following class directly into your HTML. Alternatively, you can use Sass @extend (ref: http://sass-lang.com/documentation/file.SASS_REFERENCE.html#_extend__extend) to pull the contents of the class into another CSS rule or just use the $font-secondary variable.
+
+.pr-u-font--secondary {
+    font-family: $font-secondary;
+}
+
+// Font size mixins
+// You can use these mixins directly in a component or module to trigger the font size rules. Alternatively, you can use the classes to add to your HTML to trigger font sizes without needing to edit any Sass files
+
+// Note: These font-sizes are currently the same as AP so may well change in future. For now, they'll work as a good foundation to start with.
+@mixin fsize-12 {
+    font-size: 12px !important;
+    line-height: 15px !important;
+}
+
+@mixin fsize-14 {
+    font-size: 14px !important;
+    line-height: 20px !important;
+}
+
+@mixin fsize-16 {
+    font-size: 16px !important;
+    line-height: 24px !important;
+}
+
+@mixin fsize-18 {
+    font-size: 18px !important;
+    line-height: 26px !important;
+}
+
+@mixin fsize-24 {
+    font-size: 18px !important;
+    line-height: 26px !important;
+
+    @include breakpoint(tablet-portrait-up) {
+        font-size: 22px !important;
+        line-height: 25px !important;
+    }
+
+    @include breakpoint(tablet-landscape-up) {
+        font-size: 24px !important;
+        line-height: 28px !important;
+    }
+}
+
+@mixin fsize-28 {
+    font-size: 22px !important;
+    line-height: 25px !important;
+
+    @include breakpoint(tablet-portrait-up) {
+        font-size: 26px !important;
+        line-height: 29px !important;
+    }
+
+    @include breakpoint(tablet-landscape-up) {
+        font-size: 28px !important;
+        line-height: 31px !important;
+    }
+}
+
+@mixin fsize-36 {
+    font-size: 22px !important;
+    line-height: 25px !important;
+
+    @include breakpoint(tablet-portrait-up) {
+        font-size: 30px !important;
+        line-height: 33px !important;
+    }
+
+    @include breakpoint(tablet-landscape-up) {
+        font-size: 36px !important;
+        line-height: 40px !important;
+    }
+}
+
+@mixin fsize-42 {
+    font-size: 22px !important;
+    line-height: 25px !important;
+
+    @include breakpoint(tablet-portrait-up) {
+        font-size: 36px !important;
+        line-height: 40px !important;
+    }
+
+    @include breakpoint(tablet-landscape-up) {
+        font-size: 42px !important;
+        line-height: 46px !important;
+    }
+}
+
+
+// Font size classes
+.pr-u-fsize {
+    &--12 {
+        @include fsize-12;
+    }
+
+    &--14 {
+        @include fsize-14;
+    }
+
+    &--16 {
+        @include fsize-16;
+    }
+
+    &--18 {
+        @include fsize-18;
+    }
+
+    &--24 {
+        @include fsize-24;
+    }
+
+    &--28 {
+        @include fsize-28;
+    }
+
+    &--36 {
+        @include fsize-36;
+    }
+
+    &--42 {
+        @include fsize-42;
+    }
+}
+
+// Font weight classes
+.pr-u-fweight {
+    &--regular {
+        font-weight: $regular;
+    }
+
+    &--bold {
+        font-weight: $bold;
+    }
+}
+
+
+// Font color classes
+.pr-u-fcolour {
+    &--pink {
+        color: $pink;
+    }
+
+    &--sky-blue {
+        color: $sky-blue;
+    }
+
+    &--grey {
+        color: $grey;
+    }
+}
